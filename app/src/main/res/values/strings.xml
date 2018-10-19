@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">能耗记录</string>
+    <string name="current_value">值</string>
+    <string name="use_total">用量</string>
+    <string name="exit_app">退出程序</string>
+    <string name="electric_name">总  电  表</string>
+    <string name="gas_kitchen_name">厨房气表1</string>
+    <string name="gas_kitchen_name2">厨房气表2</string>
+    <string name="gas_guolu_name">锅炉气表1</string>
+    <string name="gas_guolu_name2">锅炉气表2</string>
+    <string name="water_name">水  表</string>
+</resources>
