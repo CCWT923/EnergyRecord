@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:layout_margin="0dp"
         >
         <TextView
             android:layout_width="match_parent"
@@ -18,6 +19,8 @@
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/title"
             />
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,15 +40,27 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
-                android:layout_weight="0.4"
+                android:layout_weight="0.25"
                 android:hint="@string/current_value"
+                android:id="@+id/ele_value"
                 />
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.4"
+                android:inputType="numberDecimal"
+                android:layout_weight="0.25"
+                android:hint="@string/last_value"
+                android:id="@+id/ele_lastValue"
+                />
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
                 android:inputType="numberDecimal"
                 android:hint="@string/use_total"
+                android:id="@+id/ele_useValue"
+                android:clickable="true"
+                android:focusable="false"
                 />
         </LinearLayout>
 
@@ -66,15 +81,27 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/current_value"
-                android:layout_weight="0.4"
+                android:layout_weight="0.25"
                 android:inputType="numberDecimal"
+                android:id="@+id/gas_kitchen_value"
                 />
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.4"
+                android:inputType="numberDecimal"
+                android:layout_weight="0.25"
+                android:hint="@string/last_value"
+                android:id="@+id/gas_kitchen_lastValue"
+                />
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
                 android:hint="@string/use_total"
                 android:inputType="numberDecimal"
+                android:id="@+id/gas_kitchen_use"
+                android:clickable="true"
+                android:focusable="false"
                 />
         </LinearLayout>
 
@@ -94,15 +121,27 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/current_value"
-                android:layout_weight="0.4"
+                android:layout_weight="0.25"
                 android:inputType="numberDecimal"
+                android:id="@+id/gas_kitchen_value2"
                 />
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.4"
+                android:inputType="numberDecimal"
+                android:layout_weight="0.25"
+                android:hint="@string/last_value"
+                android:id="@+id/gas_kitchen_lastValue2"
+                />
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
                 android:inputType="numberDecimal"
                 android:hint="@string/use_total"
+                android:id="@+id/gas_kitchen_use2"
+                android:clickable="true"
+                android:focusable="false"
                 />
         </LinearLayout>
 
@@ -122,15 +161,27 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/current_value"
-                android:layout_weight="0.4"
+                android:layout_weight="0.25"
                 android:inputType="numberDecimal"
+                android:id="@+id/gas_guolu_value"
                 />
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.4"
+                android:inputType="numberDecimal"
+                android:layout_weight="0.25"
+                android:hint="@string/last_value"
+                android:id="@+id/gas_guolu_lastValue"
+                />
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
                 android:inputType="numberDecimal"
                 android:hint="@string/use_total"
+                android:id="@+id/gas_guolu_use"
+                android:clickable="true"
+                android:focusable="false"
                 />
         </LinearLayout>
 
@@ -150,15 +201,27 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/current_value"
-                android:layout_weight="0.4"
+                android:layout_weight="0.25"
                 android:inputType="numberDecimal"
+                android:id="@+id/gas_guolu_value2"
                 />
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.4"
+                android:inputType="numberDecimal"
+                android:layout_weight="0.25"
+                android:hint="@string/last_value"
+                android:id="@+id/gas_guolu_lastValue2"
+                />
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
                 android:inputType="numberDecimal"
                 android:hint="@string/use_total"
+                android:id="@+id/gas_guolu_use2"
+                android:clickable="true"
+                android:focusable="false"
                 />
         </LinearLayout>
 
@@ -178,15 +241,27 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/current_value"
-                android:layout_weight="0.4"
+                android:layout_weight="0.25"
                 android:inputType="numberDecimal"
+                android:id="@+id/water_value"
                 />
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.4"
+                android:inputType="numberDecimal"
+                android:layout_weight="0.25"
+                android:hint="@string/last_value"
+                android:id="@+id/water_lastValue"
+                />
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
                 android:hint="@string/use_total"
                 android:inputType="numberDecimal"
+                android:id="@+id/water_use"
+                android:clickable="true"
+                android:focusable="false"
                 />
         </LinearLayout>
         <LinearLayout
@@ -204,22 +279,29 @@
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="@string/current_value"
-                android:layout_weight="0.8"
+                android:hint="电费+气费+水费"
+                android:layout_weight="0.7"
                 android:inputType="numberDecimal"
+                android:id="@+id/money_total"
                 />
 
         </LinearLayout>
 
-        <Button
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@color/colorAccent"
-            android:text="@string/exit_app"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
-            />
+            android:layout_height="match_parent">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="2dp"
+                android:background="@color/colorPrimary"
+                android:text="@string/calc"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:id="@+id/btn_calc"
+                />
+        </LinearLayout>
     </LinearLayout>
 
 
