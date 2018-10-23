@@ -32,7 +32,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.3"
+                android:layout_weight="0.25"
                 android:text="@string/electric_name"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
@@ -40,7 +40,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
-                android:layout_weight="0.25"
+                android:layout_weight="0.2"
                 android:hint="@string/current_value"
                 android:id="@+id/ele_value"
                 />
@@ -48,17 +48,27 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
-                android:layout_weight="0.25"
+                android:layout_weight="0.2"
                 android:hint="@string/last_value"
                 android:id="@+id/ele_lastValue"
                 />
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.2"
+                android:layout_weight="0.15"
                 android:inputType="numberDecimal"
                 android:hint="@string/use_total"
                 android:id="@+id/ele_useValue"
+                android:clickable="true"
+                android:focusable="false"
+                />
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:hint="@string/use_charge"
+                android:inputType="numberDecimal"
+                android:id="@+id/ele_charge"
                 android:clickable="true"
                 android:focusable="false"
                 />
@@ -73,7 +83,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.3"
+                android:layout_weight="0.25"
                 android:text="@string/gas_kitchen_name"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
@@ -81,7 +91,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/current_value"
-                android:layout_weight="0.25"
+                android:layout_weight="0.2"
                 android:inputType="numberDecimal"
                 android:id="@+id/gas_kitchen_value"
                 />
@@ -89,17 +99,27 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
-                android:layout_weight="0.25"
+                android:layout_weight="0.2"
                 android:hint="@string/last_value"
                 android:id="@+id/gas_kitchen_lastValue"
                 />
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.2"
+                android:layout_weight="0.15"
                 android:hint="@string/use_total"
                 android:inputType="numberDecimal"
                 android:id="@+id/gas_kitchen_use"
+                android:clickable="true"
+                android:focusable="false"
+                />
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:hint="@string/use_charge"
+                android:inputType="numberDecimal"
+                android:id="@+id/gas_kitchen_charge"
                 android:clickable="true"
                 android:focusable="false"
                 />
@@ -113,7 +133,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.3"
+                android:layout_weight="0.25"
                 android:text="@string/gas_kitchen_name2"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
@@ -121,7 +141,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/current_value"
-                android:layout_weight="0.25"
+                android:layout_weight="0.2"
                 android:inputType="numberDecimal"
                 android:id="@+id/gas_kitchen_value2"
                 />
@@ -129,17 +149,27 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
-                android:layout_weight="0.25"
+                android:layout_weight="0.2"
                 android:hint="@string/last_value"
                 android:id="@+id/gas_kitchen_lastValue2"
                 />
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.2"
+                android:layout_weight="0.15"
                 android:inputType="numberDecimal"
                 android:hint="@string/use_total"
                 android:id="@+id/gas_kitchen_use2"
+                android:clickable="true"
+                android:focusable="false"
+                />
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:hint="@string/use_charge"
+                android:inputType="numberDecimal"
+                android:id="@+id/gas_kitchen_charge2"
                 android:clickable="true"
                 android:focusable="false"
                 />
@@ -153,7 +183,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.3"
+                android:layout_weight="0.25"
                 android:text="@string/gas_guolu_name"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
@@ -161,7 +191,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/current_value"
-                android:layout_weight="0.25"
+                android:layout_weight="0.2"
                 android:inputType="numberDecimal"
                 android:id="@+id/gas_guolu_value"
                 />
@@ -169,17 +199,27 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
-                android:layout_weight="0.25"
+                android:layout_weight="0.2"
                 android:hint="@string/last_value"
                 android:id="@+id/gas_guolu_lastValue"
                 />
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.2"
+                android:layout_weight="0.15"
                 android:inputType="numberDecimal"
                 android:hint="@string/use_total"
                 android:id="@+id/gas_guolu_use"
+                android:clickable="true"
+                android:focusable="false"
+                />
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:hint="@string/use_charge"
+                android:inputType="numberDecimal"
+                android:id="@+id/gas_guolu_charge"
                 android:clickable="true"
                 android:focusable="false"
                 />
@@ -193,7 +233,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.3"
+                android:layout_weight="0.25"
                 android:text="@string/gas_guolu_name2"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
@@ -201,7 +241,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/current_value"
-                android:layout_weight="0.25"
+                android:layout_weight="0.2"
                 android:inputType="numberDecimal"
                 android:id="@+id/gas_guolu_value2"
                 />
@@ -209,17 +249,27 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
-                android:layout_weight="0.25"
+                android:layout_weight="0.2"
                 android:hint="@string/last_value"
                 android:id="@+id/gas_guolu_lastValue2"
                 />
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.2"
+                android:layout_weight="0.15"
                 android:inputType="numberDecimal"
                 android:hint="@string/use_total"
                 android:id="@+id/gas_guolu_use2"
+                android:clickable="true"
+                android:focusable="false"
+                />
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:hint="@string/use_charge"
+                android:inputType="numberDecimal"
+                android:id="@+id/gas_guolu_charge2"
                 android:clickable="true"
                 android:focusable="false"
                 />
@@ -233,7 +283,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.3"
+                android:layout_weight="0.25"
                 android:text="@string/water_name"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
@@ -241,7 +291,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/current_value"
-                android:layout_weight="0.25"
+                android:layout_weight="0.2"
                 android:inputType="numberDecimal"
                 android:id="@+id/water_value"
                 />
@@ -249,17 +299,27 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
-                android:layout_weight="0.25"
+                android:layout_weight="0.2"
                 android:hint="@string/last_value"
                 android:id="@+id/water_lastValue"
                 />
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.2"
+                android:layout_weight="0.15"
                 android:hint="@string/use_total"
                 android:inputType="numberDecimal"
                 android:id="@+id/water_use"
+                android:clickable="true"
+                android:focusable="false"
+                />
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:hint="@string/use_charge"
+                android:inputType="numberDecimal"
+                android:id="@+id/water_charge"
                 android:clickable="true"
                 android:focusable="false"
                 />
@@ -275,14 +335,30 @@
                 android:layout_weight="0.3"
                 android:text="费用合计"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:hint="气费合计"
+                android:id="@+id/gas_chargeSum"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="false"
+                />
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:hint="电费+气费+水费"
-                android:layout_weight="0.7"
+                android:layout_weight="0.4"
                 android:inputType="numberDecimal"
                 android:id="@+id/money_total"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="false"
                 />
 
         </LinearLayout>

@@ -12,6 +12,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
@@ -52,6 +53,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         gas_guolu_value2 = findViewById(R.id.gas_guolu_value2);
         gas_guolu_lastValue = findViewById(R.id.gas_guolu_lastValue);
         gas_guolu_lastValue2 = findViewById(R.id.gas_guolu_lastValue2);
+
+        txt_ele_charge = findViewById(R.id.ele_charge);
+        txt_water_charge = findViewById(R.id.water_charge);
+        txt_guolu_charge1 = findViewById(R.id.gas_guolu_charge);
+        txt_guolu_charge2 = findViewById(R.id.gas_guolu_charge2);
+        txt_kitchen_charge1 = findViewById(R.id.gas_kitchen_charge);
+        txt_kitchen_charge2 = findViewById(R.id.gas_kitchen_charge2);
+        txt_gas_chargeSum = findViewById(R.id.gas_chargeSum);
 
         ele_use = findViewById(R.id.ele_useValue);
         ele_value = findViewById(R.id.ele_value);
@@ -95,12 +104,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     EditText gas_kitchen_lastValue2;
     EditText gas_guolu_lastValue;
     EditText gas_guolu_lastValue2;
+    EditText txt_ele_charge;
+    EditText txt_water_charge;
+    EditText txt_guolu_charge1;
+    EditText txt_guolu_charge2;
+    EditText txt_kitchen_charge1;
+    EditText txt_kitchen_charge2;
+    EditText txt_gas_chargeSum;
 
     TextView view_title;
-    double charge_guolu = 0.0;
-    double charge_kichen = 0.0;
-    double charge_water = 0.0;
-    double charge_ele = 0.0;
     double charge_total = 0.0;
     double priceOfWater = 4.43;
     double priceOfEle = 0.85;
@@ -109,56 +121,66 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v)
     {
+        String t;
         //用电量
         if(ele_value.getText().length() > 0 && ele_lastValue.getText().length() > 0)
         {
             //保留两位小数
-            ele_use.setText(new DecimalFormat("0.00").format(((Double.valueOf(ele_value.getText().toString()) - Double.valueOf(ele_lastValue.getText().toString())) * 1000)));
+            t = new DecimalFormat("0").format(((Double.valueOf(ele_value.getText().toString()) - Double.valueOf(ele_lastValue.getText().toString())) * 1000));
+            ele_use.setText(t);
+            txt_ele_charge.setText( String.valueOf(Double.valueOf(t) * priceOfEle));
         }
         //厨房气表1
         if(gas_kitchen_value1.getText().length() > 0 && gas_kitchen_lastValue.getText().length ()> 0)
         {
-            gas_kitchen_use1.setText(String.valueOf((Double.valueOf(gas_kitchen_value1.getText().toString()) - Double.valueOf(gas_kitchen_lastValue.getText().toString()))));
+            t = String.valueOf((Double.valueOf(gas_kitchen_value1.getText().toString()) - Double.valueOf(gas_kitchen_lastValue.getText().toString())));
+            gas_kitchen_use1.setText(t);
+            txt_kitchen_charge1.setText(String.valueOf(Double.valueOf(t) * priceOfGas));
         }
         //厨房气表2
         if(gas_kitchen_value2.getText().length() > 0 && gas_kitchen_lastValue2.getText().length ()> 0)
         {
-            gas_kitchen_use2.setText(String.valueOf((Double.valueOf(gas_kitchen_value2.getText().toString()) - Double.valueOf(gas_kitchen_lastValue2.getText().toString()))));
+            t = String.valueOf((Double.valueOf(gas_kitchen_value2.getText().toString()) - Double.valueOf(gas_kitchen_lastValue2.getText().toString())));
+            gas_kitchen_use2.setText(t);
+            txt_kitchen_charge2.setText(String.valueOf(Double.valueOf(t) * priceOfGas));
         }
         //锅炉气表1
         if(gas_guolu_value1.getText().length() > 0 && gas_guolu_lastValue.getText().length ()> 0)
         {
-            gas_guolu_use1.setText(String.valueOf((Double.valueOf(gas_guolu_value1.getText().toString()) - Double.valueOf(gas_guolu_lastValue.getText().toString()))));
+            t = String.valueOf((Double.valueOf(gas_guolu_value1.getText().toString()) - Double.valueOf(gas_guolu_lastValue.getText().toString())));
+            gas_guolu_use1.setText(t);
+            txt_guolu_charge1.setText(String.valueOf(Double.valueOf(t) * priceOfGas));
         }
         //锅炉气表2
         if(gas_guolu_value2.getText().length() > 0 && gas_guolu_lastValue2.getText().length ()> 0)
         {
-            gas_guolu_use2.setText(String.valueOf((Double.valueOf(gas_guolu_value2.getText().toString()) - Double.valueOf(gas_guolu_lastValue2.getText().toString()))));
+            t = String.valueOf((Double.valueOf(gas_guolu_value2.getText().toString()) - Double.valueOf(gas_guolu_lastValue2.getText().toString())));
+            gas_guolu_use2.setText(t);
+            txt_guolu_charge2.setText(String.valueOf(Double.valueOf(t) * priceOfGas));
         }
         //水表
         if(water_value.getText().length() > 0 && water_lastValue.getText().length ()> 0)
         {
-            water_use.setText(String.valueOf((Double.valueOf(water_value.getText().toString()) - Double.valueOf(water_lastValue.getText().toString()))));
+            t = String.valueOf((Double.valueOf(water_value.getText().toString()) - Double.valueOf(water_lastValue.getText().toString())));
+            water_use.setText(t);
+            txt_water_charge.setText(String.valueOf(Double.valueOf(t)* priceOfWater));
         }
 
-        if(water_use.getText().length() > 0)
-        {
-            charge_water = Double.valueOf(water_use.getText().toString()) * priceOfWater;
-        }
-        if(ele_use.getText().length() > 0)
-        {
-            charge_ele = Double.valueOf(ele_use.getText().toString()) * priceOfEle;
-        }
-        if(gas_guolu_use2.getText().length() > 0 && gas_guolu_use1.getText().length() > 0)
-        {
-            charge_guolu = (Double.valueOf(gas_guolu_use1.getText().toString()) + Double.valueOf(gas_guolu_use2.getText().toString())) * priceOfGas;
-        }
-        if(gas_kitchen_use1.getText().length() > 0 && gas_kitchen_use2.getText().length() > 0)
-        {
-            charge_kichen = (Double.valueOf(gas_kitchen_use1.getText().toString()) + Double.valueOf(gas_kitchen_use2.getText().toString())) * priceOfGas;
-        }
+        try {
+            txt_gas_chargeSum.setText(new DecimalFormat("0.00").format(
+                    Double.valueOf(txt_guolu_charge1.getText().toString())
+                            + Double.valueOf(txt_guolu_charge2.getText().toString())
+                            + Double.valueOf(txt_kitchen_charge1.getText().toString())
+                            + Double.valueOf(txt_kitchen_charge2.getText().toString())
 
-        charge_total = charge_ele + charge_water + charge_kichen + charge_guolu;
-        editText_charge_total.setText(new DecimalFormat("0.00").format((charge_total)));
+            ));
+
+            charge_total = Double.valueOf(txt_gas_chargeSum.getText().toString()) + Double.valueOf(txt_ele_charge.getText().toString()) + Double.valueOf(txt_water_charge.getText().toString());
+            editText_charge_total.setText(new DecimalFormat("0.00").format((charge_total)));
+        }catch (Exception ex)
+        {
+            //显示消息
+            Toast.makeText(this, ex.getMessage(), Toast.LENGTH_LONG).show();
+        }
     }
 }
